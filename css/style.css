@@ -2,10 +2,12 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
 }
 
 nav {
-    background-color: #f0f0f0;
+    background-color: #1f1f1f; /* Fundo do menu de navegação */
     padding: 10px;
 }
 
@@ -22,7 +24,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #bb86fc; /* Links com cor destacada */
 }
 
 .container {
@@ -32,17 +34,25 @@ nav a {
 
 .left-sidebar {
     width: 200px;
-    background-color: #e0e0e0;
+    background-color: #1e1e1e; /* Fundo da barra lateral esquerda */
     padding: 20px;
+    color: #e0e0e0;
 }
 
 .main-content {
     flex: 1;
     padding: 20px;
+    background-color: #181818; /* Fundo do conteúdo principal */
+    color: #e0e0e0;
 }
 
 .right-sidebar {
     width: 200px;
-    background-color: #e0e0e0;
+    background-color: #1e1e1e; /* Fundo da barra lateral direita */
     padding: 20px;
+    color: #e0e0e0;
+}
+
+.hidden {
+    display: none;
 }

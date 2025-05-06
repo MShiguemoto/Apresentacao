@@ -28,23 +28,23 @@
         </aside>
 
         <main class="main-content">
-            <section id="sobre">
+            <section id="sobre" class="hidden">
                 <h2>Sobre Mim</h2>
                 <p>Uma breve descrição sobre você...</p>
             </section>
 
-            <section id="experiencia">
+            <section id="experiencia" class="hidden">
                 <h2>Experiência Profissional</h2>
                 <article>
                     <h3>Desenvolvedor Junior - Unimake Software</h3>
                     <p>Período: 08/23 - atualmente </p>
                     <p>Desenvolvedor backend atuando principalmente com documentos ficais brasileiros, fazendo integrações com diferentes API's REST 
                         e SOAP. Presto suporte principalmente na emissão de NFSe, além de realizar novas integrações com os diferentes tipos de padrões de emissão.
-                    </p>
+</p>
                 </article>
             </section>
 
-            <section id="educacao">
+            <section id="educacao" class="hidden">
                 <h2>Formação Acadêmica</h2>
                 <article>
                     <h3>Engenharia eletrônica - Universidade Tecnológica Federal do Paraná (UTFPR)</h3>
@@ -56,7 +56,7 @@
                 </article>
             </section>
 
-            <section id="habilidades">
+            <section id="habilidades" class="hidden">
                 <h2>Habilidades</h2>
                 <ul>
                     <li>C#</li>
@@ -65,7 +65,7 @@
                 </ul>
             </section>
 
-            <section id="contato">
+            <section id="contato" class="hidden">
                 <h2>Contato</h2>
                 <p>Você pode me contatar através do email shiguemoto.m@gmail.com.</p>
             </section>
@@ -85,5 +85,27 @@
         </aside>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", event => {
+                    event.preventDefault();
+
+                    // Get the target section ID
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        // Toggle the visibility of the target section
+                        targetSection.classList.toggle("hidden");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
+``` 
